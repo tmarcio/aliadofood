@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aliado Food — Seu aliado na fome</title>
+<meta name="description" content="Peça refeições, pizzas e bebidas da Aliado Food em Luanda. Levantamento no ponto de venda ou entrega ao domicílio com taxa calculada por município.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==========================================================================
+     CABEÇALHO
+     ========================================================================== -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="#topo" class="brand">
+      <img src="assets/logo.png" alt="Aliado Food">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#parceiros">Parceiros</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#trabalhe-connosco">Trabalhe Connosco</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--outline-dark btn--sm" href="https://wa.me/244929809889" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="cart-btn" id="cartToggle" aria-haspopup="dialog" aria-controls="cartDrawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        Carrinho
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ==========================================================================
+       HERO
+       ========================================================================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__badge"><span class="dot"></span> A aceitar pedidos agora em Luanda</span>
+        <h1>O sabor de Angola, entregue <span>com fome de bem servir.</span></h1>
+        <p class="hero__lede">Refeições caseiras, pizzas fresquinhas e bebidas geladas — peça online, escolha entre levantar no nosso ponto de venda ou receber em casa com taxa calculada automaticamente pelo seu município.</p>
+        <div class="hero__ctas">
+          <a href="#cardapio" class="btn btn--primary">Ver cardápio</a>
+          <a href="https://wa.me/244929809889" target="_blank" rel="noopener" class="btn btn--whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.98s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.48-.14.14-.28.28-.12.56.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.63.77 1.9.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"></path></svg>
+            Pedir pelo WhatsApp
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><strong>15–35 min</strong><span>tempo médio de entrega</span></div>
+          <div class="hero__stat"><strong>9</strong><span>municípios cobertos</span></div>
+          <div class="hero__stat"><strong>Aliado+</strong><span>pontos em cada pedido</span></div>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <div class="hero__art-disc"></div>
+        <svg viewBox="0 0 200 200" fill="none">
+          <g stroke="#FDF5EC" stroke-width="9" stroke-linecap="round">
+            <path d="M60 30v52M75 30v40a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8V30M67 90v80"/>
+          </g>
+          <g fill="#FDF5EC">
+            <path d="M120 30c14 0 26 16 26 36 0 16-8 28-19 33l-7 71h-10l-7-71c-11-5-19-17-19-33 0-20 12-36 26-36 3 0 6 0 10 0z"/>
+          </g>
+        </svg>
+        <div class="hero__floating-card hero__floating-card--top">
+          <span class="icon-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          Pedido confirmado
+        </div>
+        <div class="hero__floating-card hero__floating-card--bottom">
+          <span class="icon-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          Taxa calculada por município
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CARDÁPIO
+       ========================================================================== -->
+  <section class="section" id="cardapio">
+    <div class="container">
+      <div class="eyebrow-row">
+        <div>
+          <p class="section-kicker">Cardápio</p>
+          <h2>Escolha o que lhe apetece hoje</h2>
+          <p class="section-lede">Refeições tradicionais, pizzas artesanais e bebidas geladas — tudo preparado no dia.</p>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio">
+          <button class="menu-tab" role="tab" data-category="refeicoes" aria-selected="true">Refeições</button>
+          <button class="menu-tab" role="tab" data-category="pizzas" aria-selected="false">Pizzas</button>
+          <button class="menu-tab" role="tab" data-category="bebidas" aria-selected="false">Bebidas</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COMO FUNCIONA
+       ========================================================================== -->
+  <section class="section section--crimson" id="como-funciona">
+    <div class="container">
+      <p class="section-kicker" style="color:#FFD9A8">Como funciona</p>
+      <h2>Do carrinho à sua mesa em 4 passos</h2>
+      <p class="section-lede">Simples, rápido e com acompanhamento por referência.</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-card__num">01</span>
+          <h3>Monte o seu pedido</h3>
+          <p>Adicione refeições, pizzas e bebidas ao carrinho.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">02</span>
+          <h3>Escolha a entrega</h3>
+          <p>Levantamento no ponto de venda ou entrega — a taxa é calculada pelo seu município.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">03</span>
+          <h3>Confirme os seus dados</h3>
+          <p>Preencha nome e contacto e receba já a sua referência de pedido.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">04</span>
+          <h3>Acompanhe a entrega</h3>
+          <p>A nossa equipa atribui um estafeta disponível e o seu pedido segue a caminho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PARCEIROS
+       ========================================================================== -->
+  <section class="section section--tight" id="parceiros">
+    <div class="container">
+      <p class="section-kicker">Parceiros</p>
+      <h2>Quem caminha connosco</h2>
+      <p class="section-lede">Trabalhamos com parceiros de confiança para garantir qualidade do primeiro ao último quilómetro.</p>
+      <div class="partners-grid" id="partnersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACTIVIDADES
+       ========================================================================== -->
+  <section class="section" id="actividades">
+    <div class="container">
+      <p class="section-kicker">Actividades</p>
+      <h2>O que anda a Aliado Food a fazer</h2>
+      <p class="section-lede">Eventos, presença no terreno e novidades do nosso programa de fidelidade.</p>
+      <div class="activities-grid" id="activitiesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRABALHE CONNOSCO
+       ========================================================================== -->
+  <section class="section section--deep" id="trabalhe-connosco">
+    <div class="container">
+      <p class="section-kicker">Trabalhe connosco</p>
+      <h2>Venha fazer parte da equipa Aliado</h2>
+      <p class="section-lede">Estamos sempre a crescer. Envie a sua candidatura e a nossa equipa entra em contacto.</p>
+
+      <div class="work-grid">
+        <div class="work-points">
+          <div class="work-point">
+            <span class="icon-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg></span>
+            <div><h4>Vagas em loja e produção</h4><p>Cozinha, atendimento e ponto de venda no aeroporto.</p></div>
+          </div>
+          <div class="work-point">
+            <span class="icon-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-2l-3 8h9l-2-6h-2M7 6h5l2 5"/></svg></span>
+            <div><h4>Estafetas de entrega</h4><p>Junte-se à nossa rede de estafetas motorizados.</p></div>
+          </div>
+          <div class="work-point">
+            <span class="icon-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-6"/></svg></span>
+            <div><h4>Marketing e parcerias</h4><p>Ajude-nos a crescer a marca Aliado Food em Angola.</p></div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-success" id="workFormSuccess">Candidatura enviada com sucesso! A nossa equipa entrará em contacto em breve.</div>
+          <form id="workForm" action="https://formsubmit.co/aliadofood@hotmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nova candidatura — Trabalhe Connosco Aliado Food">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="index.html?candidatura=enviada#trabalhe-connosco">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="workNome">Nome completo</label>
+                <input type="text" id="workNome" name="Nome" required>
+              </div>
+              <div class="form-field">
+                <label for="workTelefone">Telefone</label>
+                <input type="tel" id="workTelefone" name="Telefone" required>
+              </div>
+              <div class="form-field">
+                <label for="workEmail">Email</label>
+                <input type="email" id="workEmail" name="Email" required>
+              </div>
+              <div class="form-field">
+                <label for="workArea">Área de interesse</label>
+                <select id="workArea" name="Área de interesse" required>
+                  <option value="">Seleccione</option>
+                  <option>Cozinha e produção</option>
+                  <option>Atendimento / ponto de venda</option>
+                  <option>Estafeta de entrega</option>
+                  <option>Marketing e parcerias</option>
+                  <option>Administrativo</option>
+                  <option>Outra</option>
+                </select>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="workMsg">Fale-nos de si (experiência, disponibilidade, link de CV)</label>
+                <textarea id="workMsg" name="Mensagem" rows="4" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--secondary btn--block">Enviar candidatura</button>
+            <p class="form-note">Ao enviar, os seus dados são encaminhados directamente para aliadofood@hotmail.com.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ALIADO+
+       ========================================================================== -->
+  <section class="section--tight" id="fidelidade">
+    <div class="loyalty-banner">
+      <div>
+        <h3>Programa de Fidelidade Aliado+</h3>
+        <p>Ganhe pontos em cada pedido e troque por refeições, pizzas e bebidas grátis.</p>
+      </div>
+      <a href="https://aliadomais.lovable.app" target="_blank" rel="noopener" class="btn btn--ghost" style="border-color:#fff;color:#fff;background:rgba(255,255,255,0.15)">Aceder ao Aliado+</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     RODAPÉ
+     ========================================================================== -->
+<footer class="site-footer" id="contactos">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Aliado Food">
+        </div>
+        <p style="max-width:32ch;font-size:0.9rem;">Seu aliado na fome. Refeições, pizzas e bebidas em Luanda — no ponto de venda ou à porta de sua casa.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/aliadofood" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://facebook.com/aliadofood.ao" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/244929809889" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#parceiros">Parceiros</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+          <li><a href="#trabalhe-connosco">Trabalhe Connosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <ul>
+          <li><a href="tel:+244929809889">+244 929 809 889</a></li>
+          <li><a href="https://wa.me/244929809889" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:aliadofood@hotmail.com">aliadofood@hotmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fidelidade</h4>
+        <ul>
+          <li><a href="https://aliadomais.lovable.app" target="_blank" rel="noopener">Programa Aliado+</a></li>
+          <li><a href="admin.html">Acesso da equipa</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Aliado Food — Seu aliado na fome.</span>
+      <span>Feito em Luanda, Angola.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     CARRINHO
+     ========================================================================== -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Carrinho de compras" aria-modal="true">
+  <div class="cart-drawer__header">
+    <h3>O seu carrinho</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Fechar carrinho">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-drawer__footer">
+    <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">0 Kz</span></div>
+    <div class="cart-summary-row"><span>Taxa de entrega</span><span id="cartDeliveryHint">calculada no checkout</span></div>
+    <button class="btn btn--primary btn--block" id="checkoutBtn">Finalizar pedido</button>
+  </div>
+</aside>
+
+<!-- ==========================================================================
+     MODAL DE CHECKOUT
+     ========================================================================== -->
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Finalizar pedido">
+  <div class="modal__backdrop" id="checkoutBackdrop"></div>
+  <div class="modal__panel">
+    <button class="icon-btn modal__close" id="checkoutClose" aria-label="Fechar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="modal__eyebrow">Finalizar pedido</p>
+    <h2 id="checkoutTitle">Como quer receber o seu pedido?</h2>
+
+    <div class="checkout-progress">
+      <span class="is-active" data-step="1"></span>
+      <span data-step="2"></span>
+      <span data-step="3"></span>
+      <span data-step="4"></span>
+    </div>
+
+    <!-- Passo 1: entrega ou levantamento -->
+    <div class="checkout-step is-active" data-step="1">
+      <div class="option-tiles">
+        <button type="button" class="option-tile" id="optPickup" aria-pressed="false">
+          <span class="icon-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+          <strong>Levantar na loja</strong>
+          <span>Ponto de venda Aliado Food — sem taxa de entrega.</span>
+        </button>
+        <button type="button" class="option-tile" id="optDelivery" aria-pressed="false">
+          <span class="icon-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-2l-3 8h9l-2-6h-2M7 6h5l2 5"/></svg></span>
+          <strong>Entrega ao domicílio</strong>
+          <span>Taxa calculada automaticamente pelo seu município.</span>
+        </button>
+      </div>
+      <div class="step-actions">
+        <span></span>
+        <button class="btn btn--primary" id="toStep2" disabled>Continuar</button>
+      </div>
+    </div>
+
+    <!-- Passo 2: morada / município -->
+    <div class="checkout-step" data-step="2">
+      <div id="addressFields">
+        <div class="form-field">
+          <label for="municipioSelect">Município *</label>
+          <select id="municipioSelect"></select>
+          <span class="field-error" id="municipioError">Seleccione o seu município.</span>
+        </div>
+        <div class="delivery-fee-box" id="deliveryFeeBox">
+          <span>Taxa de entrega estimada</span>
+          <strong id="deliveryFeeValue">—</strong>
+        </div>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="bairroInput">Bairro <span style="font-weight:400">(opcional)</span></label>
+            <input type="text" id="bairroInput" placeholder="Ex: Camama">
+          </div>
+          <div class="form-field">
+            <label for="ruaInput">Rua <span style="font-weight:400">(opcional)</span></label>
+            <input type="text" id="ruaInput" placeholder="Ex: Rua 15">
+          </div>
+        </div>
+      </div>
+      <p class="form-note" id="pickupNote" style="display:none">Vai levantar o pedido no ponto de venda Aliado Food, sem custo adicional.</p>
+      <div class="step-actions">
+        <button class="btn btn--ghost" style="color:var(--ink);border-color:var(--line)" id="backStep1">Voltar</button>
+        <button class="btn btn--primary" id="toStep3">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Passo 3: dados do cliente -->
+    <div class="checkout-step" data-step="3">
+      <div class="form-field">
+        <label for="clienteNome">Nome completo *</label>
+        <input type="text" id="clienteNome" required>
+        <span class="field-error">Indique o seu nome.</span>
+      </div>
+      <div class="form-field">
+        <label for="clienteTelefone">Telefone *</label>
+        <input type="tel" id="clienteTelefone" placeholder="9XX XXX XXX" required>
+        <span class="field-error">Indique um telefone válido.</span>
+      </div>
+      <div class="form-field">
+        <label for="clienteEmail">Email <span style="font-weight:400">(opcional)</span></label>
+        <input type="email" id="clienteEmail">
+      </div>
+      <div class="form-field">
+        <label for="clienteObs">Observações <span style="font-weight:400">(opcional)</span></label>
+        <textarea id="clienteObs" rows="3" placeholder="Ex: sem cebola, troco para 10.000 Kz..."></textarea>
+      </div>
+      <div class="step-actions">
+        <button class="btn btn--ghost" style="color:var(--ink);border-color:var(--line)" id="backStep2">Voltar</button>
+        <button class="btn btn--primary" id="toStep4">Rever pedido</button>
+      </div>
+    </div>
+
+    <!-- Passo 4: resumo e confirmação -->
+    <div class="checkout-step" data-step="4">
+      <div id="orderSummary"></div>
+      <div class="order-summary-list">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="summarySubtotal">0 Kz</span></div>
+        <div class="cart-summary-row"><span>Taxa de entrega</span><span id="summaryDelivery">0 Kz</span></div>
+        <div class="cart-summary-row cart-summary-row--total"><span>Total</span><span id="summaryTotal">0 Kz</span></div>
+      </div>
+      <div class="step-actions">
+        <button class="btn btn--ghost" style="color:var(--ink);border-color:var(--line)" id="backStep3">Voltar</button>
+        <button class="btn btn--primary" id="confirmOrder">Confirmar pedido</button>
+      </div>
+    </div>
+
+    <!-- Passo 5: confirmação final -->
+    <div class="checkout-step" data-step="5">
+      <div class="confirmation-box">
+        <span class="icon-dot"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <h2>Pedido registado com sucesso!</h2>
+        <p>Guarde a sua referência para acompanhamento.</p>
+        <div class="confirmation-ref" id="confirmationRef">AF-000000</div>
+        <p class="form-note">Para um atendimento mais célere, envie também o resumo do seu pedido directamente pelo WhatsApp da Aliado Food.</p>
+        <div class="confirmation-actions">
+          <a class="btn btn--whatsapp btn--block" id="whatsappOrderBtn" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Enviar pedido via WhatsApp
+          </a>
+          <button class="btn btn--outline-dark btn--block" id="closeConfirmation">Concluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aliado Food — Painel da Equipa</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-login" id="adminLogin">
+  <div class="admin-login__card">
+    <img src="assets/logo.png" alt="Aliado Food" class="admin-login__logo">
+    <h2>Painel da equipa</h2>
+    <p>Acesso reservado à equipa Aliado Food.</p>
+    <div class="form-field">
+      <label for="adminPass">Palavra-passe</label>
+      <input type="password" id="adminPass" placeholder="••••••••">
+    </div>
+    <button class="btn btn--primary btn--block" id="adminLoginBtn">Entrar</button>
+    <p class="form-note" id="adminLoginError" style="color:var(--crimson);display:none;">Palavra-passe incorrecta.</p>
+    <p class="form-note">Nota: este acesso é uma protecção simples do lado do navegador, pensada para uso interno. Para um controlo de acessos robusto (utilizadores, permissões), liga este painel a um backend como o Supabase — ver README.</p>
+  </div>
+</div>
+
+<div class="admin-app" id="adminApp" style="display:none;">
+  <header class="admin-header">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Aliado Food"></a>
+    <div class="admin-header__title">
+      <h1>Painel da Equipa</h1>
+      <span>Pedidos e estafetas</span>
+    </div>
+    <button class="btn btn--outline-dark btn--sm" id="adminLogout">Sair</button>
+  </header>
+
+  <div class="admin-notice">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+    <p>Este painel lê os pedidos guardados <strong>neste navegador</strong>. Para veres aqui os pedidos feitos pelos clientes nos telemóveis deles, é necessário ligar a base de dados a um backend partilhado (ex: Supabase). Até lá, o canal principal e imediato para receber pedidos é o botão <strong>"Enviar pedido via WhatsApp"</strong> que o cliente usa no final da compra — consulta o README para o próximo passo.</p>
+  </div>
+
+  <nav class="admin-tabs">
+    <button class="admin-tab is-active" data-tab="pedidos">Pedidos</button>
+    <button class="admin-tab" data-tab="estafetas">Estafetas</button>
+  </nav>
+
+  <!-- PEDIDOS -->
+  <section class="admin-panel is-active" id="panel-pedidos">
+    <div class="admin-panel__head">
+      <h2>Pedidos recebidos</h2>
+      <span class="admin-count" id="ordersCount">0 pedidos</span>
+    </div>
+    <div id="ordersList" class="orders-list"></div>
+  </section>
+
+  <!-- ESTAFETAS -->
+  <section class="admin-panel" id="panel-estafetas">
+    <div class="admin-panel__head">
+      <h2>Estafetas cadastrados</h2>
+      <button class="btn btn--secondary btn--sm" id="addCourierBtn">+ Novo estafeta</button>
+    </div>
+    <div id="couriersList" class="couriers-list"></div>
+  </section>
+</div>
+
+<!-- Modal: novo/editar estafeta -->
+<div class="modal" id="courierModal" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" id="courierBackdrop"></div>
+  <div class="modal__panel" style="max-width:420px;">
+    <button class="icon-btn modal__close" id="courierClose" aria-label="Fechar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="modal__eyebrow">Estafeta</p>
+    <h2>Novo estafeta</h2>
+    <div class="form-field">
+      <label for="courierNome">Nome</label>
+      <input type="text" id="courierNome">
+    </div>
+    <div class="form-field">
+      <label for="courierTelefone">Telefone (WhatsApp)</label>
+      <input type="tel" id="courierTelefone" placeholder="9XX XXX XXX">
+    </div>
+    <div class="form-field">
+      <label for="courierZona">Zona habitual</label>
+      <input type="text" id="courierZona" placeholder="Ex: Talatona, Belas">
+    </div>
+    <button class="btn btn--primary btn--block" id="courierSaveBtn">Guardar estafeta</button>
+  </div>
+</div>
+
+<!-- Modal: atribuir estafeta a um pedido -->
+<div class="modal" id="assignModal" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" id="assignBackdrop"></div>
+  <div class="modal__panel" style="max-width:420px;">
+    <button class="icon-btn modal__close" id="assignClose" aria-label="Fechar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="modal__eyebrow">Atribuir entrega</p>
+    <h2>Escolha um estafeta disponível</h2>
+    <div id="assignCourierList" class="assign-courier-list"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
